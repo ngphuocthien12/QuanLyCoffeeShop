@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{5A22395B-3B02-4CB7-AF65-636AF6EA2790}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -25,6 +27,10 @@ Global
 		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Debug|x86.Build.0 = Debug|x86
 		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Release|x86.ActiveCfg = Release|x86
 		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Release|x86.Build.0 = Release|x86
+		{5A22395B-3B02-4CB7-AF65-636AF6EA2790}.Debug|x86.ActiveCfg = Debug|x86
+		{5A22395B-3B02-4CB7-AF65-636AF6EA2790}.Debug|x86.Build.0 = Debug|x86
+		{5A22395B-3B02-4CB7-AF65-636AF6EA2790}.Release|x86.ActiveCfg = Release|x86
+		{5A22395B-3B02-4CB7-AF65-636AF6EA2790}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,28 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using System.Threading.Tasks;
 
 namespace DAO
 {
-   public class userDAO
+    public class UserDAO : DataProvider
     {
-        private static userDAO instance;
-
-        public static userDAO Instance
+        public bool Login(string user, string pass)
         {
-            get { if (instance == null) instance = new userDAO(); return instance; }
-            private set { instance = value; }
-        }
-
-        private userDAO() { }
-
-        public bool Login(string userName, string passWord)
-        {
-            string query = "SELECT COUNT(UserName) FROM Users WHERE UserName = '" + userName + "' AND Password = '" + passWord + "'";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            
-            return result.Rows.Count > 0;
+            string sql = "SELECT COUNT(UserName) FROM Users WHERE UserName = '" + user + "' AND Password = '" + pass + "'";
+            int NumberOfRows = MyExecuteScalar(sql);
+            if (NumberOfRows > 0)
+                return true;
+            else return false;
         }
     }
-    }
+}
+

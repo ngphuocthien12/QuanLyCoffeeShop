@@ -86,6 +86,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BUS\BUS.csproj">
+      <Project>{5A22395B-3B02-4CB7-AF65-636AF6EA2790}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="DAO\DAO.csproj">
       <Project>{5149F797-553F-4125-B8C6-E79E7C61F54E}</Project>
       <Name>DAO</Name>
