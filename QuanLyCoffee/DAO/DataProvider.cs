@@ -9,7 +9,7 @@ namespace DAO
 {
     public class DataProvider
     {
-        private static DataProvider instance; // Ctrl + R + E
+        private static DataProvider instance; 
 
         public static DataProvider Instance
         {

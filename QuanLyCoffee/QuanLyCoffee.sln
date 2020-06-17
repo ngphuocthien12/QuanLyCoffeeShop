@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCoffee", "QuanLyCoffee.csproj", "{4B81C5A2-829C-4FE7-B784-3D2D6713B704}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{5149F797-553F-4125-B8C6-E79E7C61F54E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +17,14 @@ Global
 		{4B81C5A2-829C-4FE7-B784-3D2D6713B704}.Debug|x86.Build.0 = Debug|x86
 		{4B81C5A2-829C-4FE7-B784-3D2D6713B704}.Release|x86.ActiveCfg = Release|x86
 		{4B81C5A2-829C-4FE7-B784-3D2D6713B704}.Release|x86.Build.0 = Release|x86
+		{5149F797-553F-4125-B8C6-E79E7C61F54E}.Debug|x86.ActiveCfg = Debug|x86
+		{5149F797-553F-4125-B8C6-E79E7C61F54E}.Debug|x86.Build.0 = Debug|x86
+		{5149F797-553F-4125-B8C6-E79E7C61F54E}.Release|x86.ActiveCfg = Release|x86
+		{5149F797-553F-4125-B8C6-E79E7C61F54E}.Release|x86.Build.0 = Release|x86
+		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Debug|x86.ActiveCfg = Debug|x86
+		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Debug|x86.Build.0 = Debug|x86
+		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Release|x86.ActiveCfg = Release|x86
+		{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

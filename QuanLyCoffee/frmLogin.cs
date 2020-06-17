@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using DAO;
 
 namespace QuanLyCoffee
 {
@@ -19,10 +19,25 @@ namespace QuanLyCoffee
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            frmCoffeeManager f = new frmCoffeeManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string userName = txtUserName.Text;
+            string passWord = txtPassword.Text;
+
+            if (Login(userName, passWord))
+            {
+                frmCoffeeManager f = new frmCoffeeManager();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+        }
+
+        bool Login(string userName, string passWord)
+        {
+            return userDAO.Instance.Login(userName, passWord);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
