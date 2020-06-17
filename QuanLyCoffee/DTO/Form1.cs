@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QuanLyCoffee
+namespace DTO
 {
-    public partial class frmCoffeeManager : Form
+    public partial class Form1 : Form
     {
-        public frmCoffeeManager()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

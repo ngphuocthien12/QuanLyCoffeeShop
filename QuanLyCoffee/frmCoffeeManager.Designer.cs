@@ -77,6 +77,7 @@
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // flpTable
             // 
@@ -100,14 +101,14 @@
             // 
             // nmFoodcount
             // 
-            this.nmFoodcount.Location = new System.Drawing.Point(294, 30);
+            this.nmFoodcount.Location = new System.Drawing.Point(353, 30);
             this.nmFoodcount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nmFoodcount.Name = "nmFoodcount";
-            this.nmFoodcount.Size = new System.Drawing.Size(85, 20);
+            this.nmFoodcount.Size = new System.Drawing.Size(65, 20);
             this.nmFoodcount.TabIndex = 10;
             this.nmFoodcount.Value = new decimal(new int[] {
             1,
@@ -120,7 +121,7 @@
             this.cbProduct.FormattingEnabled = true;
             this.cbProduct.Location = new System.Drawing.Point(0, 41);
             this.cbProduct.Name = "cbProduct";
-            this.cbProduct.Size = new System.Drawing.Size(166, 21);
+            this.cbProduct.Size = new System.Drawing.Size(219, 21);
             this.cbProduct.TabIndex = 1;
             // 
             // cbCategory
@@ -128,13 +129,13 @@
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(0, 14);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(166, 21);
+            this.cbCategory.Size = new System.Drawing.Size(219, 21);
             this.cbCategory.TabIndex = 0;
             // 
             // btAdd
             // 
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAdd.Location = new System.Drawing.Point(180, 23);
+            this.btAdd.Location = new System.Drawing.Point(238, 23);
             this.btAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(95, 29);
@@ -247,6 +248,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCoffeeManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Cà Phê";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
