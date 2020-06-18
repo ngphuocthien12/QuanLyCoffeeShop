@@ -9,6 +9,7 @@ namespace DAO
 {
     public class UserDAO : DataProvider
     {
+        // new
         public bool Login(string user, string pass)
         {
             string sql = "SELECT COUNT(UserName) FROM Users WHERE UserName = '" + user + "' AND Password = '" + pass + "'";

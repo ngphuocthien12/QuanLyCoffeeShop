@@ -250,6 +250,7 @@
             this.Name = "frmCoffeeManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Cà Phê";
+            this.Load += new System.EventHandler(this.frmCoffeeManager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

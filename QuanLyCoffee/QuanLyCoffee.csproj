@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyCoffeee.cs" />
     <EmbeddedResource Include="frmCoffeeManager.resx">
       <DependentUpon>frmCoffeeManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +100,12 @@
       <Project>{CA215BAF-0B8C-47C1-B4F0-9C3433A0B1AA}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83355134_1405182619670400_7362536127711457260_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103836260_1130839983975865_6822045096820896210_n.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
