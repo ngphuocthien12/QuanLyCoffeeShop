@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using DAO;
 
 namespace QuanLyCoffee
 {
@@ -83,8 +84,33 @@ namespace QuanLyCoffee
             cbCategory.DisplayMember = "name";
         }
 
-       
+        FoodBUS foodBUS = new FoodBUS();
+        public void LoadFood(string id)
+        {
 
+            List<Food> listFood = foodBUS.LoadFood(id);
+            cbFood.DataSource = listFood;
+            cbFood.DisplayMember = "name";
+
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string id;
+
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Category selected = cb.SelectedItem as Category;
+            id = selected.Id;
+
+            LoadFood(id);
+        }
+
+
+       
       
     }
 }
