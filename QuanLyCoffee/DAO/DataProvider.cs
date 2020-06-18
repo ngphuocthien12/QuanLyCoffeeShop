@@ -55,15 +55,6 @@ namespace DAO
 
         public DataTable GetTable(string sql)
         {
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter da = new SqlDataAdapter(sql, cn);
-
-            //int numberOfRows = da.Fill(dt);
-
-            //if (numberOfRows > 0)
-            //    return dt;
-            //else return null;
-
             DataTable dt = new DataTable();
 
             SqlDataAdapter da = new SqlDataAdapter(sql, cn);
@@ -71,6 +62,14 @@ namespace DAO
             if (numberOfRows > 0)
                 return dt;
             else return null;
+        }
+
+        public SqlDataReader MyExecuteReader(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+
         }
 
         public int MyExecuteNonQuery(string sql)

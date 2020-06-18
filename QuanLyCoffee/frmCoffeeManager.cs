@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace QuanLyCoffee
 {
@@ -15,6 +16,7 @@ namespace QuanLyCoffee
         public frmCoffeeManager()
         {
             InitializeComponent();
+            LoadCategory();
         }
         //hiển thị bàn
         TableBUS tabBUS = new TableBUS();
@@ -44,7 +46,7 @@ namespace QuanLyCoffee
             }
 
         }
-        //hiển thị danh sách món ăn
+        //hiển thị hóa đơn theo bàn
         ItemBUS itemBUS = new ItemBUS();
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -55,7 +57,7 @@ namespace QuanLyCoffee
 
             DataTable dt = itemBUS.Get(tableID);
             dgvItem.DataSource = dt;
-
+             // tính tổng tiền
             float total = 0;
             if (table[2].ToString() == "Có người")
             {
@@ -71,6 +73,14 @@ namespace QuanLyCoffee
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        CategoryBUS categoryBUS = new CategoryBUS();
+        public void LoadCategory()
+        {
+            List<Category> listCategory = categoryBUS.LoadCategory();
+            cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "name";
         }
 
        
