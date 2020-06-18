@@ -16,7 +16,7 @@ namespace QuanLyCoffee
         {
             InitializeComponent();
         }
-
+        //hiển thị bàn
         TableBUS tabBUS = new TableBUS();
         private void frmCoffeeManager_Load(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace QuanLyCoffee
                 btn.Size = new Size(100, 100);
                 btn.BackgroundImageLayout = ImageLayout.Zoom;
                 btn.Text = table[1].ToString() + Environment.NewLine + Environment.NewLine + table[2].ToString();
-                //btn.Click += Btn_Click;
+                btn.Click += Btn_Click;
                 btn.Tag = table;
 
                 switch (table[2].ToString())
@@ -44,12 +44,36 @@ namespace QuanLyCoffee
             }
 
         }
-      
+        //hiển thị danh sách món ăn
+        ItemBUS itemBUS = new ItemBUS();
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            DataRow table = (DataRow)btn.Tag;
+
+            int tableID = Int32.Parse(table[0].ToString());
+
+            DataTable dt = itemBUS.Get(tableID);
+            dgvItem.DataSource = dt;
+
+            float total = 0;
+            if (table[2].ToString() == "Có người")
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    total += float.Parse(row["TTien"].ToString());
+                }
+                txtTTien.Text = total.ToString();
+            }
+            else txtTTien.Text = total.ToString("0");
+        }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+       
 
       
     }
